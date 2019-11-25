@@ -1,7 +1,7 @@
 Use Noah
 select top 10 * from Company_US_Weekly_PLA_SKU
 
-select min([week]) from brady.dbo.brady_global_pla_spend_by_sku_mj 
+select min([week]) from Company.dbo.Company_global_pla_spend_by_sku_mj 
 
 /**
 
@@ -53,7 +53,7 @@ from Company_US_Weekly_PLA_SKU8
 --- UNION ALL 
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
-into Noah.dbo.brady_global_pla_spend_by_sku_nk1
+into Noah.dbo.Company_global_pla_spend_by_sku_nk1
 from Company_US_Weekly_PLA_SKU1
 union all
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
@@ -83,8 +83,8 @@ union all
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
 from Company_US_Weekly_PLA_SKU8
--- drop table brady.dbo.brady_global_pla_spend_by_sku_mj 
--- select * from brady.dbo.brady_global_pla_spend_by_sku_mj 
+-- drop table Company.dbo.Company_global_pla_spend_by_sku_mj 
+-- select * from Company.dbo.Company_global_pla_spend_by_sku_mj 
 
 select * 
 from Company_US_Weekly_PLA_SKU_bing
@@ -105,7 +105,7 @@ from Company_UK_Weekly_PLA_SKU2
 
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
-into Noah.dbo.brady_CompanyUK_global_pla_spend_by_sku_nk
+into Noah.dbo.Company_CompanyUK_global_pla_spend_by_sku_nk
 from Company_UK_Weekly_PLA_SKU1
 union all
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
@@ -115,7 +115,7 @@ from Company_UK_Weekly_PLA_SKU2
 
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
-into Noah.dbo.brady_Company_global_pla_spend_by_sku_nk
+into Noah.dbo.Company_Company_global_pla_spend_by_sku_nk
 from Company_Weekly_PLA_SKU1
 union all
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
@@ -127,7 +127,7 @@ from Company_Weekly_PLA_SKU2
 
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
-into Noah.dbo.brady_CompanyFRA_pla_spend_by_sku_nk
+into Noah.dbo.Company_CompanyFRA_pla_spend_by_sku_nk
 from Company_FRA_Weekly_PLA_SKU1
 union all
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
@@ -144,10 +144,9 @@ from Company_FRA_Weekly_PLA3
 
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
-into Noah.dbo.brady_CompanyBelgium_pla_spend_by_sku_nk
+into Noah.dbo.Company_CompanyBelgium_pla_spend_by_sku_nk
 from Company_Belgium_Weekly_PLA_SKU1
 union all
 select 'Google' as Search_Engine, [campaign type], [campaign subtype], cast([week] as date) as [Week],
 [campaign id], campaign, [ad group id],[ad group], [item id], clicks, impressions, cost, conversions, [Conv  value] as convalue
 from Company_Belgium_Weekly_PLA_SKU2
-
